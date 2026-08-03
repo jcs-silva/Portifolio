@@ -1,3 +1,4 @@
+/* Fontes  */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -8,12 +9,21 @@ body{
 a{
     text-decoration: none;
 }
+:root{
+    --cor-primaria: rgb(17, 24, 68);
+    --cor-secundaria: rgb(75, 86, 148);
+    --cor-terciaria: rgb(114, 136, 174);
+    --cor-texto: rgb(238, 238, 238);
 
+    --fonte-titulo: 'Montserrat', sans-serif;
+    --fonte-texto: 'Noto Serif', serif;
+}
 
+/* Estilos do Cabeçalho */
 .cabecalho{
     font-weight: 500;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(238, 238, 238);
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,83 +32,72 @@ a{
     margin-left: 20px;
     margin-bottom: 20px;
 }
-
+/* Estilos da Divisória do Cabeçalho */
 .divisoria-cabecalho{
     color: rgb(234, 224, 207);
     border: 1px solid rgb(234, 224, 207);
 }
-
+/* Estilos dos Links do Cabeçalho */
 .cabecalho-superior-esquerdo a{
     font-size: 22px;
     margin-left: 20px;
-    color: rgb(238, 238, 238);
+    color: var(--cor-texto)
 }
 
 .cabecalho-superior-direito a{
-    color: rgb(238, 238, 238);
+    color: var(--cor-texto);
     padding: 10px;
     margin-right: 20px;
 }
-
-
+/* Estilos da Sessão de Apresentação */
 .apresentacao{
-    font-family: 'Noto Serif', serif;
-    color: rgb(238, 238, 238);
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
     padding: 20px;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    background-color: rgb(75, 86, 148);
+    background-color: var(--cor-secundaria);
     border-radius: 10px;
-    border: 2px solid rgb(114, 136, 174);
+    border: 2px solid var(--cor-terciaria);
     width: 50%;
     text-align: justify;
     position: relative;
     margin-left: 20px;
 }
-
+/* Estilos da Formação */
 .formacao{
     font-size: 25px;
     font-weight: 800;
 }
-
+/* Estilos do Texto Sobre Mim */
 .sobre_mim{
     font-size: 18px;
     font-weight: 600;
 }
-
+/* Estilos dos Botões */
 .botoes{
     display: flex;
     gap: 50px;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-titulo);
 }
-
-.botao-GIT{
-    color: rgb(238, 238, 238);
-    background-color: rgb(17, 24, 68);
-    border: 2px solid rgb(238, 238, 238);
+/* Estilos do Botão do GitHub */
+.botao-GIT, .botao-LINKEDIN{
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    border: 2px solid var(--cor-terciaria);
     font-weight: 600;
     width: 100px;
     height: 40px;
     border-radius: 5px;
     cursor: pointer;
 }
+/* Estilos do Botão do LinkedIn */
 
-.botao-LINKEDIN{
-    color: rgb(238, 238, 238);
-    background-color: rgb(17, 24, 68);
-    border: 2px solid rgb(238, 238, 238);
-    font-weight: 600;
-    width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    cursor: pointer;
-    
-}
-
+/* Estilos da Foto */
 .foto{
     width: 325px;
     height: 325px;
@@ -106,16 +105,17 @@ a{
     position: absolute;
     right: -270px;
 }
+/* Estilos da Foto Principal */
 .foto-principal{
     width: 325px;
     height: 325px;
     border-radius: 1000px;
     position: absolute;
-    right: -270px;
-    border: 3px solid rgb(114, 136, 174);
+    right: -500px;
+    border: 2px solid rgb(75, 86, 148) ;
 }
 
-
+/* Estilos da Sessão de Projetos */
 .projetos {
     display: flex;
     flex-direction: column;
@@ -123,131 +123,119 @@ a{
     margin-top: 50px;
     margin-left: 20px;
 }
-
+/* Estilos dos Títulos */
 .titulo-projetos, .titulo-skills{
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(238, 238, 238);
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto);
     font-weight: 600;
     font-size: 22px;
 }
-
+/* Estilos dos Cards de Projetos */
 .cards-projetos {
     display: flex;
     gap: 20px;
     width: 82%;
 }
+/* Estilos da Sessão de Skills */
 
 .skills {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* mesmo esquema */
     gap: 20px;
     margin-top: 50px;
     margin-left: 20px;
 }
-
+/* Estilos dos Cards de Skills */
 .cards-skills {
     display: flex;
     gap: 20px;
     width: 82%;
 }
 
-
-.projeto{
-    font-family: 'Noto Serif', serif;
-    color: rgb(238, 238, 238);
-    background-color: rgb(75, 86, 148);
-    border: 2px solid rgb(114, 136, 174);
+/* Estilos dos Projetos */
+.projeto, .projeto-2{
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
     border-radius: 5px;
     width: 30%;
     text-align: justify;
     padding: 10px;
 }
+/* Estilos do Segundo Projeto */
 
 
-.projeto-2{
-    font-family: 'Noto Serif', serif;
-    color: rgb(238, 238, 238);
-    background-color: rgb(75, 86, 148);
-    border: 2px solid rgb(114, 136, 174);
+/* Estilos das Skills */
+.soft-skills, .hard-skills{
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
+    background-color: var(--cor-secundaria);
+    border: 2px solid var(--cor-terciaria);
     border-radius: 5px;
     width: 30%;
     text-align: justify;
     padding: 10px;
 }
+/* Estilos das Skills Técnicas */
 
-
-.soft-skills{
-    font-family: 'Noto Serif', serif;
-    color: rgb(238, 238, 238);
-    background-color: rgb(75, 86, 148);
-    border: 2px solid rgb(114, 136, 174);
-    border-radius: 5px;
-    width: 30%;
-    text-align: justify;
-    padding: 10px;
-}
-
-.hard-skills{
-    font-family: 'Noto Serif', serif;
-    color: rgb(238, 238, 238);
-    background-color: rgb(75, 86, 148);
-    border: 2px solid rgb(114, 136, 174);
-    border-radius: 5px;
-    width: 30%;
-    text-align: justify;
-    padding: 10px;
-}
-
-
+/* Estilos dos Contatos */
 .contatos{
     position: absolute;
     display: flex;
+    align-content: center;
     flex-direction: column;
     gap: 12px;
-    left: 1030px;
+    left: 1540px;
     top: 450px;
-    margin-top: 30px;
+    margin-top: 10px;
     
 }
-
+/* Estilos dos Ícones de Contato */
 .whatsapp, .instagram, .email{
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
+/* Estilos dos Ícones */
 .icone-whatsapp, .icone-instagram, .icone-email{
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 1px;
 }
-
+/* Estilos dos Textos de Contato */
 .contato-whatsapp, .contato-instagram, .contato-gmail{
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(238, 238, 238);
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
     font-weight: 600;
     font-size: 14px;
 }
-.contato-whatsapp:hover{
-    text-decoration: underline;
-}
-
+/* Estilos dos Textos de Contato ao Passar o Mouse */
 .contato-instagram:hover{
     text-decoration: underline;
 }
-
-
+/* Estilos do Texto do WhatsApp ao Passar o Mouse */
+.contato-whatsapp:hover{
+    text-decoration: underline;
+}
+/* Estilos da Divisória do Rodapé */
 .divisoria-rodape{
     color: rgb(234, 224, 207);
     border: 1px solid rgb(234, 224, 207);
     margin-top: 50px;
     width: 30%;
 }
+/* Estilos do Rodapé */
 .rodape{
     font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(238, 238, 238);
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto);
     margin-top: 20px;
     display: flex;
     justify-content: center;
+}
+/* Estilos para os Projetos e Skills */
+.projeto .skills{
+    display: flex;
+    flex-direction: column-reverse;
 }
